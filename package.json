@@ -6,13 +6,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bikram Sahoo",
   "license": "ISC",
-  "description": "",
+  "description": "Kafka Node js implementation.",
   "dependencies": {
-    "express": "^5.2.1",
-    "kafkajs": "^2.2.4",
-    "morgan": "^1.10.1",
-    "nodemon": "^3.1.11"
+    "kafkajs": "^2.2.4"
   }
 }

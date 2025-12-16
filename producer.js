@@ -7,10 +7,6 @@ const producer = kafkaIns.producer({
 
 async function produceMessages() {
 
-    // if(!message){
-    //     res.status.send("message is required");
-    //     return;
-    // }
   try {
     // Connect producer
     await producer.connect();
@@ -40,4 +36,3 @@ async function produceMessages() {
 
 
 produceMessages();
-// module.exports = {produceMessages};
