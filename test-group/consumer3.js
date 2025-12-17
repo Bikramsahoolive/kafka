@@ -1,4 +1,4 @@
-const {kafkaIns} = require("./kafkaConfig");
+const {kafkaIns} = require("../kafkaConfig");
 
 
 // Create a consumer
@@ -13,11 +13,20 @@ async function consumeMessages() {
     // Subscribe to topic
     await consumer.subscribe({ topic: 'mytopic', fromBeginning: true });
 
+    //--NOTE
+
+    // OR there is a consumer.assign([{topic:"mytopic",partition:0}]); assign() in java that can help to asign a
+    //  partition to the specific consumer.
+
+    // fromBeginning: true : read messages from begaining if not offset, can not get offset data.
+    //fromBeginning: false : can not sebscribe to previous messages, only read data produced after consumer joined.
+
+
     // Consume messages one by one
     await consumer.run({
       eachMessage: async ({ topic, partition, message }) => {
         console.log(`Received message: ${message.value.toString()}`);
-        console.log(`Topic: ${topic}, Partition: ${partition}, Offset: ${message.offset}`);
+        // console.log(`Topic: ${topic}, Partition: ${partition}, Offset: ${message.offset}`);
       },
     });
 

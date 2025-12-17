@@ -13,7 +13,7 @@ async function produceMessages() {
     console.log('Producer connected');
 
     // Produce messages
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 100; i <= 110; i++) {
       const message = {
         value: `this is message ${i}`,
       };

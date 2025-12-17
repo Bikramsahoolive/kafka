@@ -1,6 +1,6 @@
 kafka:
   clusters:
     - name: local
-      bootstrapServers: localhost:9092
+      bootstrapServers: localhost:9092,localhost:9094
 server:
   port: 8080

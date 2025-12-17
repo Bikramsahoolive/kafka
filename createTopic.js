@@ -9,8 +9,8 @@ async function createTopic() {
     topics: [
       {
         topic: "mytopic",
-        numPartitions: 3,
-        replicationFactor: 1
+        numPartitions: 2,  //partition for the topic
+        replicationFactor: 2 //sync data with two brokers to avoid data loss
       }
     ],
   });
